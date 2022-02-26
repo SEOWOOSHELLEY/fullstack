@@ -4,5 +4,5 @@ from django.shortcuts import render
 def coronamap(request):
     return render(
         request,
-        'main_page/button_test.html',
+        'main_page/map_test.html',
     )
