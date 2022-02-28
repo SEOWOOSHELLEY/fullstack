@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Title</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+      crossorigin="anonymous"
+    ></script>
+
+
+<style>
+    .my_left{
+        border: solid 3px black;
+        columns:	540px;
+        text-align: left;
+        padding: 20px;
+        margin-right: 0px;
+    }
+    .my_middle{
+        border: solid 3px black;
+        color : #ffffff;
+        text-align: center;
+        padding: 20px;
+        margin-right: 40px;
+        columns:	540px;
+    }    .my_right{
+        border: solid 3px black;
+        columns: 	540px;
+        text-align: left;
+        padding: 20px;
+    }
+    </style>
+    </head>
+    <body>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container-fluid">
+            <a class="navbar-brand" href="#">웹로고</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+                    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" onclick="/map' ">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">음성 서비스</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">?</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    언어
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <li><a class="dropdown-item" href="#">English</a></li>
+                    <li><a class="dropdown-item" href="#">中文</a></li>
+                    <li><a class="dropdown-item" href="#">Tiếng Việt</a></li>
+                    <li><a class="dropdown-item" href="#">ไทย</a></li>
+                    <li><a class="dropdown-item" href="#">日本</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link disabled">Disabled</a>
+                </li>
+                </ul>
+    
+            </div>
+            </div>
+        </nav>
+
+    <br/> 
+    
+    <br/>
+<div class="container">
+    <div class="row">
+    <button type="button" class="btn btn-success my_middle">찾아보기 !</button>
+    </div>
+    <br><br><br>
+    <div class="row">
+    <div class="col">
+        <div class="my_left">
+            <div class="accordion" id="accordionExample">
+                <div class="accordion-item">
+                <h2 class="accordion-header" id="headingOne">
+                <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapseOne"
+                    aria-expanded="false"
+                    aria-controls="collapseOne"
+                    >
+                    PCR 검사기준
+                    </button>
+                </h2>
+                <div
+                    id="collapseOne"
+                    class="accordion-collapse collapse"
+                    aria-labelledby="headingOne"
+                    data-bs-parent="accordionExample"
+                >
+                    <div class="accordion-body">
+                    <strong>고위험군만 PCR 검사 가능.</strong><br />
+                    고위험군이란? 역학연관자, 의사유소견자, 60세이상, 자가검사키트양성,
+                    요양병원 등<br /><br />
+                    <strong>저위험군 코로나 검사 방법.(무료와 유료)</strong><br />
+                    선별진료소(무료)에서 자가검사키트로 검사 혹은 호흡기
+                    클리닉(5천원)에서 전문가용 신속항원검사를 통해 코로나 검사 가능.<br />
+                    (양성 결과가 나오면 PCR 검사를 진행)<br /><br />
+                    <strong>저위험군도 음성확인서 발급 가능.</strong><br />
+                    선별진료소의 관리자 감독 하에서 자가검사키트 검사 결과 음성인 경우
+                    음성확인서 발급 가능.<br />
+                    호흡기클리닉에서 전문가용 신속항원검사 결과 음성인 경우 음성확인서
+                    발급 가능.<br /><br />
+                    </div>
+                </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--
+    <div class="col-lg-4">
+        <div class="my_middle">웹이름</div>
+    </div>
+    -->
+    <div class="col">
+        <div class="my_right">
+            <div class="accordion" id="accordionExample"> 
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingTwo">
+                <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapseTwo"
+                    aria-expanded="false"
+                    aria-controls="collapseTwo"
+                >
+                    해외입국자 방역수칙
+                </button>
+                </h2>
+                <div
+                id="collapseTwo"
+                class="accordion-collapse collapse"
+                aria-labelledby="headingTwo"
+                data-bs-parent="#accordionExample"
+                >
+                <div class="accordion-body">
+                    <strong>PCR 음성 확인서 소지</strong>
+                    <strong>7일간 격리.</strong><br />
+                    한국으로 입국하는 내/외국인은 예방접종완료 구분 없이 7일을
+                    의무적으로 격리해야 함.<br />
+                    내국인/장기체류외국인은 자가 격리, 단기 체류 외국인은 시설
+                    격리(자기부담).<br /><br />
+                    <strong>방역교통망 의무 이용</strong><br />
+                    공항에서 이동 시 자차 또는 방역 교통망을 의무적으로 이용해야 함.<br /><br />
+        
+                    <!-- Button trigger modal -->
+                    <button
+                    type="button"
+                    class="btn btn-primary"
+                    data-bs-toggle="modal"
+                    data-bs-target="#exampleModal"
+                    >
+                    입국용 PCR음성확인서 기준
+                    </button>
+                    <br />
+        
+                    <!-- Modal -->
+                    <div
+                    class="modal fade"
+                    id="exampleModal"
+                    tabindex="-1"
+                    aria-labelledby="exampleModalLabel"
+                    aria-hidden="true"
+                    >
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">
+                            입국용 PCR음성확인서 기준
+                            </h5>
+                            <button
+                            type="button"
+                            class="btn-close"
+                            data-bs-dismiss="modal"
+                            aria-label="Close"
+                            ></button>
+                        </div>
+                        <br />
+                        <div class="modal-body">
+                            <p>
+                            <strong>검사 및 발급시점</strong><br />
+                            출발일 0시 기준 48시간(2일) 이내 검사한 음성확인서일 것
+                            (예시. ‘22.1.22. 10:00시 출발 시 ’22.1.20.0시 이후 검사한
+                            것으로 확인된 PCR음성확인서만 인정).
+                            </p>
+                            <br />
+                            <p>
+                            <strong>언어</strong><br />
+                            ‘검사방법’항목은 한글 또는 영문으로 발급되어야 할 것<br />
+                            검사방법이 한글이나 영문이 아닌 경우, 한글 또는 영문
+                            번역본과 번역인증 서류를 제출 시 인정 (단, 개인번역본의
+                            경우 공증기관이나 대사관의 인증을 받아야 함)
+                            </p>
+                            <br />
+                            <p>
+                            <strong>PCR 음성확인서 제출 예외 대상</strong><br />
+                              *만 6세 미만(입국일 기준) 영/유아(동반 일행이 전원
+                            음성확인서를 제출한 경우에 한함)<br />
+                              *인도적(장례식 참석) 공무출장 목적의 격리면제서 소지자<br />
+                              *항공기 승무원 *한국에서 출국하였으나 상대국에서 입국불허
+                            등으로 해외 공항에서 입국절차를 거치지 않고 귀국한 경우<br />
+                              *싱가포르에서 입국한 내국인 선원(‘대한민국
+                            선원수첩'소지자에 한함) <br />
+                              *우크라이나에서 입국한 ‘내국인'/’내국인의 외국적
+                            배우자/직계존비속'
+                            </p>
+                            <br />
+                        </div>
+                        <div class="modal-footer">
+                            <button
+                            type="button"
+                            class="btn btn-secondary"
+                            data-bs-dismiss="modal"
+                            >
+                            확인했어요 !
+                            </button>
+                        </div>
+                        </div>
+                    </div>
+                    </div>
+                    <br />
+                    <p>
+                    <a
+                        href="https://www.kdca.go.kr/board/board.es?mid=a20504000000&bid=0014&act=view&list_no=718546"
+                        >질병관리청 > 해외입국자 PCR음성확인서 제출/적합기준 안내</a
+                    >
+                    </p>
+                </div>
+                </div>
+            </div>
+            </div>
+        </div>
+    </div>
+
+
+    </html>

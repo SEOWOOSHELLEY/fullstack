@@ -2,5 +2,6 @@ from django.urls import path
 from . import views
 
 urlpatterns = [
-    path('', views.coronamap),
+    path('',views.coronapage),
+    #path('/map', views.coronamap),
 ]
