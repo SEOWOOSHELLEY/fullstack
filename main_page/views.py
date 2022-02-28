@@ -1,6 +1,43 @@
 from django.shortcuts import render
 
 # Create your views here.
+import selenium
+from selenium import webdriver
+from selenium.webdriver.common.by import By
+
+def my_scrap():
+
+
+    url_1 = "https://www.mohw.go.kr/react/ncov/selclinic04ls.jsp?tabno=4&page="
+
+    # 불러온 페이지마다 다 크롤링해야하니까 이렇게 넣어야지~!
+
+    res = []
+    cur_page = 1
+    for i in range(1, 65):
+        #    print(i, end ="/")
+        try:
+            url_full = url_1 + str(i)
+            # print(url_full)
+
+            driver = webdriver.Chrome(executable_path="C:/chromedriver.exe")
+            driver.get(url=url_full)
+
+            표_10줄 = driver.find_element(By.CLASS_NAME, 'tb_center')
+            trs = 표_10줄.find_elements_by_tag_name('tr')
+
+            for i in range(len(trs)):
+                선별td = trs[i].find_elements_by_tag_name('td')[2]
+                선별진료소 = 선별td.find_elements_by_tag_name('strong')[0].text.strip("*")
+                혼잡도 = trs[i].find_elements_by_tag_name('td')[8].text
+                res.append([선별진료소] + [혼잡도])
+
+            driver.close()
+        except:
+            print(end="")
+
+    return res
+
 
 def coronapage(request):
     return render(
@@ -9,7 +46,11 @@ def coronapage(request):
     )
 
 def coronamap(request):
+    res = my_scrap()
     return render(
         request,
         'main_page/map_test.html',
+        {
+            'wait_line' : res,
+        }
     )
