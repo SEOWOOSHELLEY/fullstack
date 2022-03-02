@@ -21,4 +21,5 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('main_page.urls')),
     path('coronamap/', main_page.views.coronamap, name='coronamap'),
+    path('en/', main_page.views.coronapage_en, name='en'),
 ]

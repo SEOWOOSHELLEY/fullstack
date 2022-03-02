@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@700&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    color : white;
+}
+
+
+.header{position:fixed;z-index:10;top:0;width:100%}
+
+html, body {
+    height: 100%;
+    width: 100%;
+}
+
+.pages {
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+.page {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    bottom: -100%;
+    transition: bottom .7s;
+  
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+   
+}
+/* 첫번째 섹션 */
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translate3d(0, 100%, 0);
+    }
+    to {
+        opacity: 1;
+        transform: translateZ(0);
+    }
+}
+
+.page:first-child {
+  bottom: 0;
+}
+
+.first {
+    background-color: #76997a;
+}
+/* 지역을 선택하세요 */
+.title1 {
+    font-family: 'Gothic A1', sans-serif;
+    font-size:300%;
+    color: navy;
+    text-align : center;
+    padding-top : 6%;
+    position: relative;
+    animation: fadeInUp 2s;
+}
+/* 지역을 선택하세요- text 효과 */
+.underline {
+    line-height: 0.5em; /* Positive value. */
+    vertical-align: 0.5em; /* Positive value. */
+    border-bottom: .4em solid transparent;
+    -moz-border-image: -moz-linear-gradient(left, #A8DBED 0%, #E291E6 100%);
+    -webkit-border-image: -webkit-linear-gradient(left, #A8DBED 0%, #E291E6 100%);
+    border-image: linear-gradient(to right, #A8DBED 0%, #E291E6 100%);
+    border-image-slice: 1;
+  }
+  
+  .underline span {
+    vertical-align: -0.4em;
+  }
+/* 도/시 */
+.city {
+    font-family: 'Gothic A1', sans-serif;
+    color: navy;
+    text-align : center;
+    padding-top : 4%;
+    position: relative;
+    animation: fadeInUp 2s;
+}
+
+
+/* 시/군/구 */
+.town {
+    font-family: 'Gothic A1', sans-serif;
+    color: navy;
+    text-align : center;
+    padding-top : 4%;
+    padding-bottom : 3%;
+    position: relative;
+    animation: fadeInUp 2s;
+}
+
+/* 두번째 섹션 */
+.second {
+    background-color: #edf1f3;
+}
+/* 세번째 섹션 */
+.third {
+    background-color: #edf1f3;
+}
+
+.pagination {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.pagination>li {
+    list-style: none;
+    height: 20px;
+    width: 20px;
+    background: #3d3d3d;
+    border-radius: 50%;
+    margin-top: 10px;
+    transition: background .7s;
+}
+
+.pagination>li.active {
+    background: #ffffff;
+}
+
+.title {
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: center;
+}

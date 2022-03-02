@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+    <script type="text/javascript" src="layout.js"></script>
+    <script type="text/javascript" src="button.js"></script>
+    <link href="layout.css" rel="stylesheet" type="text/css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gothic+A1:wght@800&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="{% static 'css/layout.css' %}">
+    <script src="/static/js/button.js" type="text/javascript"></script>
+    <script src="/static/js/layout.js" type="text/javascript"></script>
+</head>
+
+<body>
+            <div class="header">
+                <ul>
+                    <li class="on" class="a"><a href="http://localhost:8080/">메인 페이지</a></li>
+                    <li><a href="#">Translate</a></li>
+                    <li><a href="#">음성해설</a></li>
+                </ul>
+            </div>
+        </div>
+        <!-- 컨텐츠 -->
+        <div class="pages">
+            <div class="first page">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <h2 class="title1">
+                        <span class="underline"><span>지역을 선택하세요</span></span>
+                    </h2>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <h2 class="city">도<br><br>
+                        <!-- <div class="col1"> -->
+                        <button class='btn btn-primary' onclick='Buttontoggle_서울()'>서울</button> &nbsp
+                        <button class='btn btn-primary' onclick='Buttontoggle_부산()'>부산</button> &nbsp
+
+                    </h2>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <h2 class="town">시/군/구<br><br>
+                        <div id="detail"></div>
+                        <div id="detail_display"></div>
+                    </h2>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- <h2 class="title1">
+                    <span class="underline"><span>지역을 선택하세요</span></span>
+                </h2> -->
+    <!-- <h2 class="city">도<br><br>
+                    <div class = "col">
+                <button class = 'btn btn-primary' onclick='Buttontoggle_서울()'>서울</button> &nbsp 
+                <button class = 'btn btn-primary' onclick='Buttontoggle_부산()'>부산</button> &nbsp 
+                <div id ="detail"></div></h2> -->
+    <!-- <h2 class="town">시/군/구<br><br>
+                <div id ="detail_display"></div></h2>
+            </div> -->
+
+    <div class="second page">
+        <h2 class="title2">두번째 페이지 입니다 </h2>
+    </div>
+
+    <div class="third page">
+        <h2 class="title3">세번째 페이지 입니다. </h2>
+    </div>
+    </div>
+
+    <!-- 페이징 -->
+    <ul class="pagination"> </ul>
+</body>
+
+</html>

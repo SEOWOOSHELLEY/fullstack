@@ -1,6 +1,7 @@
 from django.shortcuts import render
 
 # Create your views here.
+"""
 import selenium
 from selenium import webdriver
 from selenium.webdriver.common.by import By
@@ -37,7 +38,7 @@ def my_scrap():
             print(end="")
 
     return res
-
+"""
 
 def coronapage(request):
     return render(
@@ -45,12 +46,18 @@ def coronapage(request):
         'home_page/main_page.html',
     )
 
-def coronamap(request):
-    res = my_scrap()
+def coronapage_en(request):
     return render(
         request,
-        'main_page/map_test.html',
-        {
-            'wait_line' : res,
-        }
+        'home_page/main_page_en.html',
+    )
+
+def coronamap(request):
+#    res = my_scrap()
+    return render(
+        request,
+        'main_page/layout.html',
+#        {
+#            'wait_line' : res,
+#        }
     )
