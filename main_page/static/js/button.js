@@ -16,4 +16,4 @@ t.innerHTML = '강남구보건소<br>삼성서울병원<br>강남세브란스병
 function Buttontoggle_강동구()
 {
 var t = document.getElementById('detail_display');
-t.innerHTML = '강동구보건소<br>중앙보훈병원<br>강동경희대병원<br>강동성심병원<br>'} 
+t.innerHTML = '강동구보건소<br>중앙보훈병원<br>강동경희대병원<br>강동성심병원<br>'}

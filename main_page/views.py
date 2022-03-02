@@ -1,5 +1,20 @@
 from django.shortcuts import render
 
+from django.http import JsonResponse
+import json
+
+def home(request):
+    # POST 요청일 때
+    if request.method == 'POST':
+        data = json.loads(request.body)
+        # do something
+        print(data)
+
+        context = {
+            'result': data,
+        }
+        return JsonResponse(context)
+
 # Create your views here.
 """
 import selenium
@@ -40,6 +55,15 @@ def my_scrap():
     return res
 """
 
+# mariadb
+import pymysql as m
+con = m.connect(host="localhost", user="root", password='1234',
+               db="corona_center", charset='utf8')
+cur = con.cursor()
+cur.execute("select * from center;")
+res = cur.fetchall()
+con.close()
+
 def coronapage(request):
     return render(
         request,
@@ -54,10 +78,11 @@ def coronapage_en(request):
 
 def coronamap(request):
 #    res = my_scrap()
+    res = cur.fetchall()
     return render(
         request,
         'main_page/layout.html',
-#        {
-#            'wait_line' : res,
-#        }
+        {
+            'res' : res,
+        }
     )
